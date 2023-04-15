@@ -128,8 +128,7 @@ struct GraphQlDocumentParser {
 
     // Variable List Definitions
     static let variable = match(StreamTokenVariable) ^^ {
-        print("XXX 0 = \($0)")
-        return $0.asString!
+        $0.asString!
     }
 
     static let variableType = type
